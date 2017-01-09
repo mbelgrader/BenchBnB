@@ -18,8 +18,8 @@ class SessionForm extends React.Component {
     }
   }
 
-  update(field, e) {
-    this.setState({ [field]: e.currentTarget.value });
+  update(field) {
+    return e => this.setState({ [field]: e.currentTarget.value });
   }
 
   handleSubmit(e) {
@@ -77,3 +77,5 @@ class SessionForm extends React.Component {
     );
   }
 }
+
+export default withRouter(SessionForm);
