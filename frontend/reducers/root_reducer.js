@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import SessionReducer from './session_reducer';
+import sessionReducer from './session_reducer';
 import benchesReducer from './benches_reducer';
+import filterReducer from './filter_reducer';
 
 const RootReducer = combineReducers({
-  session: SessionReducer,
-  benches: benchesReducer
+  session: sessionReducer,
+  benches: benchesReducer,
+  filter: filterReducer
 });
 
 export default RootReducer;
